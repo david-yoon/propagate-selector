@@ -38,8 +38,8 @@ mkdir ELMO_pretrain
 cd ELMO_pretrain
 
 # small
-#wget https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5
-#wget https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_options.json
+wget https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5
+wget https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_options.json
 
 # medium
 # wget https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x2048_256_2048cnn_1xhighway/elmo_2x2048_256_2048cnn_1xhighway_weights.hdf5
@@ -59,6 +59,7 @@ cd ../../
 cd preprocessing
 python 01-create_voca.py
 python 02-raw_to_index.py
+cp -rf ../data/processed/hotpot/ ../data/processed/hotpot_small/
 python 03-prepare-ELMO.py
 
 echo completed

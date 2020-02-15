@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # ## 01 - text to index
@@ -25,7 +25,7 @@ IS_LOWERCASE = True
 
 
 
-# In[5]:
+# In[3]:
 
 
 with open('../data/raw/hotpot/hotpot_train_v1.1.json', 'rb') as f:
@@ -38,13 +38,13 @@ with open('../data/raw/hotpot/hotpot_dev_fullwiki_v1.json', 'rb') as f:
     dev_wiki = json.load(f)
 
 
-# In[6]:
+# In[ ]:
 
 
-# len(Voca)
 
 
-# In[7]:
+
+# In[5]:
 
 
 # nltk
@@ -60,20 +60,13 @@ def sent2text(sent):
     return sent
 
 
-# In[8]:
+# In[ ]:
 
 
-# spacy
-# import spacy
-# nlp = spacy.load('en', disable=['tagger', 'parser', 'ner', 'textcat'])
-
-# def sent2index(sent):
-#     sent = nlp(sent.strip())
-#     sent = [x.text.lower().strip() for x in sent]
-#     return Voca.word2index(sent)
 
 
-# In[9]:
+
+# In[6]:
 
 
 def raw2text(raw_data):
@@ -116,7 +109,7 @@ def raw2text(raw_data):
 
 
 
-# In[10]:
+# In[7]:
 
 
 dev_output = raw2text(dev_distractor)
@@ -125,7 +118,7 @@ with open('../data/processed/hotpot/dev.pkl', 'wb') as f:
     pickle.dump(dev_output, f)
 
 
-# In[14]:
+# In[8]:
 
 
 train_output = raw2text(train)
@@ -134,7 +127,7 @@ with open('../data/processed/hotpot/train.pkl', 'wb') as f:
     pickle.dump(train_output, f)
 
 
-# In[15]:
+# In[9]:
 
 
 # dev_wiki_output = raw2text(dev_wiki)
@@ -155,23 +148,11 @@ with open('../data/processed/hotpot/train.pkl', 'wb') as f:
 
 
 
-# In[16]:
+# In[10]:
 
 
 with open('../data/processed/hotpot/debug.pkl', 'wb') as f:
     pickle.dump(dev_output[:200], f)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:
