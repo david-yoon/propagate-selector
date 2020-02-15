@@ -291,6 +291,7 @@ if __name__ == '__main__':
     graph_name = graph_name + '_' + datetime.datetime.now().strftime("%m-%d-%H-%M")
     params.graph_prefix = graph_name
     
+    print('[INFO] corpus:\t\t\t', args.corpus)
     print('[INFO] data:\t\t\t', params.data_path)
     print('[INFO] batch:\t\t\t', params.batch_size)
     print('[INFO] hop:\t\t\t', params.hop)
