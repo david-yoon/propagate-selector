@@ -1,22 +1,21 @@
 # propagate-selector
-------------------------------------------------------------
 
 This repository contains the source code & data corpus used in the following paper,
 
-Requirements
+**Propagate-Selector: Detecting Supporting Sentences for Question Answering via Graph Neural Networks**, LREC-20, <a href="https://arxiv.org/abs/1908.09137">[paper]</a>
+
 -------------
 
-> tensorflow==1.10 (tested on cuda-9.2, cudnn-7.6.5) <br>
-> python==3.5 <br>
-> tqdm==4.31.1 <br>
-> nltk==3.3 <br>
-> h5py==2.8.0 <br>
-> ujson==1.35 <br>
+### [requirements]
+	tensorflow==1.10 (tested on cuda-9.2, cudnn-7.6.5)
+	python==3.5
+	tqdm==4.31.1
+	nltk==3.3
+	h5py==2.8.0
+	ujson==1.35
 
 
-
-download dataset & preprocessing
--------------
+### [download dataset & preprocessing]
 
 - download "HotpotQA" to ./data/raw/hotpot/ <br>
 - clone ELMo repository and download pretrained models
@@ -31,8 +30,10 @@ sh init_make_dataset.sh
 	- 3: label [#sentence]
 
 
-Training Phase
 -------------
+
+### [training Phase]
+
 - run reference script in "./model" folder
 - results will be displayed in console <br>
 - results will be saved to "./model/TEST_run_result.txt" <br>
@@ -40,13 +41,19 @@ Training Phase
 sh reference_script_train.sh
 ```
 
+### [hyper parameters]
 
-hyper parameters
--------------
 - major parameters : edit from "./model/reference_script_train.sh" <br>
 - other parameters : edit from "./model/params.py" <br>
 
 
-cite
 -------------
+### [cite]
+
 - Please cite our paper, when you use our code | dataset | model
+	> @article{yoon2019propagate,<br>
+  title={Propagate-Selector: Detecting Supporting Sentences for Question Answering via Graph Neural Networks},<br>
+  author={Yoon, Seunghyun and Dernoncourt, Franck and Kim, Doo Soon and Bui, Trung and Jung, Kyomin},<br>
+  journal={arXiv preprint arXiv:1908.09137},<br>
+  year={2019}<br>
+}
