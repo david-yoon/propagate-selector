@@ -14,4 +14,4 @@ CUDA_VISIBLE_DEVICES=0  python train.py --batch_size 20 --hop 4 --sdim 200 --dr 
 # ELMo small: batch 80
 ###########################################
 
-CUDA_VISIBLE_DEVICES=0  python train.py --batch_size 80 --hop 4 --sdim 200 --dr 0.7 --dr_rnn 0.7 --num_train_steps 100000 --graph_prefix 'hotpot_S' --corpus 'hotpot_small' --is_save 0 --lr 0.001
+CUDA_VISIBLE_DEVICES=0  python train.py --batch_size 80 --hop 5 --sdim 200 --dr 0.7 --dr_rnn 0.7 --num_train_steps 100000 --graph_prefix 'hotpot_S' --corpus 'hotpot_small' --is_save 0 --lr 0.001
