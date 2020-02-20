@@ -23,7 +23,7 @@ def MAP(y_true, y_score):
     # check duplicate
     tmp_check = set(y_score)
     if (len(y_score) - len(tmp_check)) > 3:
-        print ("noti same predictions")
+#         print ("noti same predictions")
 
     for i in range( len(ground_label) ):
         if ground_label[i] != 0 :
