@@ -2,7 +2,7 @@
 
 This repository contains the source code & data corpus used in the following paper,
 
-**Propagate-Selector: Detecting Supporting Sentences for Question Answering via Graph Neural Networks**, LREC-20, <a href="https://arxiv.org/abs/1908.09137">[paper]</a>
+**Propagate-Selector: Detecting Supporting Sentences for Question Answering via Graph Neural Networks**, LREC-20, <a href="https://www.aclweb.org/anthology/2020.lrec-1.664">[paper]</a>
 
 -------------
 
@@ -51,9 +51,10 @@ sh reference_script_train.sh
 ### [cite]
 
 - Please cite our paper, when you use our code | dataset | model
-	> @article{yoon2019propagate,<br>
+	> @inproceedings{yoon2020propagate,<br>
   title={Propagate-Selector: Detecting Supporting Sentences for Question Answering via Graph Neural Networks},<br>
   author={Yoon, Seunghyun and Dernoncourt, Franck and Kim, Doo Soon and Bui, Trung and Jung, Kyomin},<br>
-  journal={arXiv preprint arXiv:1908.09137},<br>
-  year={2019}<br>
+  booktitle={Proceedings of The 12th Language Resources and Evaluation Conference},<br>
+  pages={5400--5407},<br>
+  year={2020}<br>
 }
